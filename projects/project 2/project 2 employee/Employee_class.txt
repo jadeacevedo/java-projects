@@ -1,0 +1,77 @@
+//Employee class
+
+1.1
+
+package javaapplication342;
+public class Employee {
+   private String firstName;
+   private String lastName;
+   private double monthlySalary; 
+
+   // constructor to initialize first name, last name and monthly salary
+   public Employee( String first, String last, double salary ){
+      firstName = first;
+      lastName = last;
+     
+      if ( salary >= 0.0 ) // determine whether salary is positive
+         monthlySalary = salary; 
+   } // end three-argument Employee constructor
+
+   // set Employee's first name
+   public void setFirstName( String first ){
+     firstName = first;
+   } // end method setFirstName
+
+   // get Employee's first name
+   public String getFirstName(){
+     return firstName;
+   } // end method getFirstName
+
+   // set Employee's last name
+   public void setLastName( String last ){
+     lastName = last;
+   } // end method setLastName
+
+   // get Employee's last name
+   public String getLastName(){
+     return lastName;
+   } // end method getLastName
+
+   // set Employee's monthly salary
+   public void setMonthlySalary( double salary ){
+      if ( salary >= 0.0 ) // determine whether salary is positive
+         monthlySalary = salary;
+   } // end method setMonthlySalary
+
+   // get Employee's monthly salary
+   public double getMonthlySalary(){
+      return monthlySalary;
+   } // end method getMonthlySalary
+} // end class Employee
+
+1.2
+
+package javaapplication342;
+public class JavaApplication342 {
+    public static void main(String[] args) {
+      Employee employee1 = new Employee( "Bob", "Jones", 2875.00 );
+      Employee employee2 = new Employee( "Susan", "Baker", 3150.75 );
+
+      // display employees
+      System.out.printf( "Employee 1: %s %s; Yearly Salary: %.2f\n", 
+         employee1.getFirstName(), employee1.getLastName(),
+         12 * employee1.getMonthlySalary() );
+      System.out.printf( "Employee 2: %s %s; Yearly Salary: %.2f\n", 
+         employee2.getFirstName(), employee2.getLastName(),
+         12 * employee2.getMonthlySalary() );
+
+    }
+    
+}
+
+run:
+Employee 1: Bob Jones; Yearly Salary: 34500.00
+Employee 2: Susan Baker; Yearly Salary: 37809.00
+BUILD SUCCESSFUL (total time: 0 seconds)
+
+
